@@ -14,13 +14,16 @@ All colors MUST be HSL.
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
 
-  /* Glooper Digital Brand Colors */
-  --glooper-navy: 231 67% 31%; /* Deep Navy #1a237e */
-  --glooper-blue: 207 90% 54%; /* Electric Blue #2196f3 */
-  --glooper-orange: 14 91% 58%; /* Vibrant Orange #ff5722 */
-  --glooper-gray-light: 210 17% 93%; /* Light Gray #f5f6fa */
-  --glooper-gray-medium: 218 11% 65%; /* Medium Gray #9ca3af */
-  --glooper-gray-dark: 220 13% 18%; /* Dark Gray #374151 */
+  /* Glooper Digital Brand Colors - Lighter Theme */
+  --glooper-navy: 220 26% 84%; /* Soft Light Navy #d1d9e8 */
+  --glooper-blue: 207 70% 90%; /* Light Sky Blue #e3f2fd */
+  --glooper-orange: 14 80% 88%; /* Soft Orange #ffe0cc */
+  --glooper-accent-blue: 207 85% 68%; /* Medium Blue for accents #42a5f5 */
+  --glooper-accent-navy: 220 45% 25%; /* Darker navy for text #2c3e50 */
+  --glooper-accent-orange: 14 85% 65%; /* Vibrant orange for CTAs #ff7043 */
+  --glooper-gray-light: 210 20% 98%; /* Very Light Gray #fbfcfd */
+  --glooper-gray-medium: 218 15% 75%; /* Soft Medium Gray #bdc3c7 */
+  --glooper-gray-dark: 220 18% 15%; /* Dark Gray for text #2c3843 */
 
   --primary: 231 67% 31%; /* Glooper Navy */
   --primary-foreground: 210 40% 98%;
@@ -137,6 +140,9 @@ All colors MUST be HSL.
   --color-glooper-navy: hsl(var(--glooper-navy));
   --color-glooper-blue: hsl(var(--glooper-blue));
   --color-glooper-orange: hsl(var(--glooper-orange));
+  --color-glooper-accent-blue: hsl(var(--glooper-accent-blue));
+  --color-glooper-accent-navy: hsl(var(--glooper-accent-navy));
+  --color-glooper-accent-orange: hsl(var(--glooper-accent-orange));
   --color-glooper-gray-light: hsl(var(--glooper-gray-light));
   --color-glooper-gray-medium: hsl(var(--glooper-gray-medium));
   --color-glooper-gray-dark: hsl(var(--glooper-gray-dark));
@@ -186,48 +192,54 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom gradients */
+/* Custom gradients - Lighter Theme */
 .glooper-gradient {
-  background: linear-gradient(135deg, hsl(var(--glooper-navy)) 0%, hsl(var(--glooper-blue)) 100%);
+  background: linear-gradient(135deg, hsl(var(--glooper-blue)) 0%, hsl(var(--glooper-navy)) 100%);
+}
+
+.glooper-gradient-hero {
+  background: linear-gradient(135deg, hsl(var(--glooper-blue)) 0%, hsl(var(--glooper-accent-blue)) 50%, hsl(var(--glooper-navy)) 100%);
 }
 
 .glooper-gradient-orange {
-  background: linear-gradient(135deg, hsl(var(--glooper-orange)) 0%, #ff8a50 100%);
+  background: linear-gradient(135deg, hsl(var(--glooper-orange)) 0%, hsl(var(--glooper-accent-orange)) 100%);
 }
 
-/* Button styles */
+/* Button styles - Lighter Theme */
 .glooper-btn-primary {
-  background: hsl(var(--glooper-navy));
+  background: hsl(var(--glooper-accent-blue));
   color: white;
   border: none;
   padding: 12px 24px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(66, 165, 245, 0.2);
 }
 
 .glooper-btn-primary:hover {
-  background: hsl(var(--glooper-blue));
+  background: hsl(var(--glooper-accent-navy));
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(33, 150, 243, 0.2);
+  box-shadow: 0 8px 25px rgba(66, 165, 245, 0.3);
 }
 
 .glooper-btn-secondary {
-  background: hsl(var(--glooper-orange));
+  background: hsl(var(--glooper-accent-orange));
   color: white;
   border: none;
   padding: 12px 24px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 112, 67, 0.2);
 }
 
 .glooper-btn-secondary:hover {
-  background: #e64a19;
+  background: hsl(14 90% 55%);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(255, 87, 34, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 112, 67, 0.3);
 }
 
 /* Card styles */
@@ -253,11 +265,11 @@ html {
   padding: 60px 0;
 }
 
-/* Typography */
+/* Typography - Lighter Theme */
 .glooper-heading {
   font-weight: 700;
   line-height: 1.2;
-  color: hsl(var(--glooper-navy));
+  color: hsl(var(--glooper-accent-navy));
 }
 
 .glooper-text {
@@ -267,6 +279,11 @@ html {
 
 .glooper-text-muted {
   color: hsl(var(--glooper-gray-medium));
+}
+
+.glooper-text-light {
+  color: hsl(var(--glooper-accent-navy));
+  opacity: 0.8;
 }
 
 /* Animations */

@@ -71,21 +71,34 @@ export default function HomePage() {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-[hsl(var(--glooper-navy))] to-[hsl(var(--glooper-blue))] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative py-24 lg:py-40 glooper-gradient-hero overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-white/20"></div>
+
+        {/* Enhanced decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[hsl(var(--glooper-accent-orange))]/15 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-[hsl(var(--glooper-accent-blue))]/20 rounded-full blur-3xl animate-pulse-slow" style={{animationDelay: '1.5s'}}></div>
+        </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Text Content */}
             <div className="space-y-8 animate-fade-in-up">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                GLOOPER DIGITAL
-                <span className="block text-[hsl(var(--glooper-orange))] text-2xl md:text-3xl lg:text-4xl mt-2">
+              <div className="inline-block px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-sm font-semibold text-[hsl(var(--glooper-accent-navy))] border border-[hsl(var(--glooper-accent-blue))]/30 mb-4">
+                🚀 Digital Excellence Redefined
+              </div>
+
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight text-[hsl(var(--glooper-accent-navy))]">
+                GLOOPER
+                <span className="block text-[hsl(var(--glooper-accent-blue))] bg-gradient-to-r from-[hsl(var(--glooper-accent-blue))] to-[hsl(var(--glooper-accent-orange))] bg-clip-text text-transparent">
+                  DIGITAL
+                </span>
+                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 font-normal text-[hsl(var(--glooper-accent-navy))]/80">
                   Unlocking Digital Excellence
                 </span>
               </h1>
 
-              <p className="text-lg md:text-xl text-blue-100 leading-relaxed max-w-xl">
+              <p className="text-lg md:text-xl glooper-text-light leading-relaxed max-w-xl">
                 Transform your business with data-driven digital marketing strategies that deliver measurable results. We specialize in SEO, PPC, and analytics to drive growth and maximize ROI.
               </p>
 
@@ -94,7 +107,7 @@ export default function HomePage() {
                   variant="secondary"
                   size="lg"
                   onClick={() => scrollToSection('contact')}
-                  className="bg-[hsl(var(--glooper-orange))] hover:bg-orange-600"
+                  className="bg-[hsl(var(--glooper-accent-orange))] hover:bg-[hsl(14_90%_55%)] text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                 >
                   Start Your Project Today
                 </CTAButton>
@@ -103,7 +116,7 @@ export default function HomePage() {
                   variant="outline"
                   size="lg"
                   onClick={() => scrollToSection('services')}
-                  className="border-white text-white hover:bg-white hover:text-[hsl(var(--glooper-navy))]"
+                  className="border-2 border-[hsl(var(--glooper-accent-blue))] text-[hsl(var(--glooper-accent-navy))] bg-white/80 backdrop-blur-sm hover:bg-[hsl(var(--glooper-accent-blue))] hover:text-white shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   View Our Services
                 </CTAButton>
@@ -112,31 +125,46 @@ export default function HomePage() {
 
             {/* Hero Image */}
             <div className="relative lg:pl-8 animate-fade-in-up">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500 bg-white/20 backdrop-blur-sm border border-white/30">
                 <img
                   src="/generated/glooper-team-hero.jpg"
                   alt="Professional digital marketing team collaborating"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover opacity-90"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--glooper-accent-blue))]/20 via-transparent to-[hsl(var(--glooper-accent-orange))]/10"></div>
+
+                {/* Floating stats overlay */}
+                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-[hsl(var(--glooper-accent-blue))]/20">
+                  <div className="text-2xl font-bold text-[hsl(var(--glooper-accent-navy))]">340%</div>
+                  <div className="text-sm text-[hsl(var(--glooper-accent-navy))]/70">ROI Increase</div>
+                </div>
+
+                <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-[hsl(var(--glooper-accent-orange))]/20">
+                  <div className="text-2xl font-bold text-[hsl(var(--glooper-accent-navy))]">250+</div>
+                  <div className="text-sm text-[hsl(var(--glooper-accent-navy))]/70">Happy Clients</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Decorative elements */}
-        <div className="absolute top-1/2 left-0 w-72 h-72 bg-[hsl(var(--glooper-orange))]/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[hsl(var(--glooper-blue))]/10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+        {/* Enhanced floating particles */}
+        <div className="absolute top-20 right-10 w-4 h-4 bg-[hsl(var(--glooper-accent-orange))] rounded-full opacity-60 animate-bounce" style={{animationDelay: '0s'}}></div>
+        <div className="absolute top-40 right-32 w-3 h-3 bg-[hsl(var(--glooper-accent-blue))] rounded-full opacity-50 animate-bounce" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-40 left-20 w-5 h-5 bg-[hsl(var(--glooper-accent-orange))] rounded-full opacity-40 animate-bounce" style={{animationDelay: '2s'}}></div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="glooper-section bg-gray-50">
+      <section id="services" className="glooper-section bg-[hsl(var(--glooper-gray-light))]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="inline-block px-6 py-2 bg-[hsl(var(--glooper-accent-blue))]/10 backdrop-blur-sm rounded-full text-sm font-semibold text-[hsl(var(--glooper-accent-blue))] border border-[hsl(var(--glooper-accent-blue))]/20 mb-6">
+              What We Offer
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold glooper-heading mb-4">
               Our Digital Marketing Services
             </h2>
-            <p className="text-lg glooper-text-muted max-w-3xl mx-auto">
+            <p className="text-lg glooper-text max-w-3xl mx-auto">
               We deliver comprehensive digital marketing solutions tailored to your business needs,
               combining cutting-edge technology with proven strategies to drive measurable results.
             </p>
@@ -184,13 +212,22 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="glooper-section-sm bg-[hsl(var(--glooper-navy))] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="glooper-section-sm bg-gradient-to-r from-[hsl(var(--glooper-accent-blue))]/95 via-[hsl(var(--glooper-blue))]/95 to-[hsl(var(--glooper-navy))]/95 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-white/10"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-[hsl(var(--glooper-accent-orange))]/20 rounded-full blur-2xl"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold text-white border border-white/30 mb-4">
+              Our Track Record
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Proven Results That Speak for Themselves
             </h2>
-            <p className="text-lg text-blue-100 max-w-2xl mx-auto">
+            <p className="text-lg text-white/90 max-w-2xl mx-auto">
               Our data-driven approach consistently delivers exceptional outcomes for our clients across all industries.
             </p>
           </div>
@@ -230,13 +267,16 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="glooper-section">
+      <section id="testimonials" className="glooper-section bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="inline-block px-6 py-2 bg-[hsl(var(--glooper-accent-orange))]/10 backdrop-blur-sm rounded-full text-sm font-semibold text-[hsl(var(--glooper-accent-orange))] border border-[hsl(var(--glooper-accent-orange))]/20 mb-6">
+              Client Stories
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold glooper-heading mb-4">
               Client Success Stories
             </h2>
-            <p className="text-lg glooper-text-muted max-w-3xl mx-auto">
+            <p className="text-lg glooper-text max-w-3xl mx-auto">
               Don't just take our word for it. Here's what our clients have to say about working with Glooper Digital.
             </p>
           </div>
@@ -257,12 +297,22 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="glooper-section bg-gradient-to-r from-[hsl(var(--glooper-blue))] to-[hsl(var(--glooper-navy))] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <section id="contact" className="glooper-section bg-gradient-to-br from-[hsl(var(--glooper-blue))] via-[hsl(var(--glooper-accent-blue))] to-[hsl(var(--glooper-navy))] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-white/5"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
+          <div className="absolute top-20 right-20 w-64 h-64 bg-[hsl(var(--glooper-accent-orange))]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold text-white border border-white/30 mb-6">
+            Let's Get Started
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Transform Your Digital Presence?
           </h2>
-          <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
             Let's discuss how our data-driven digital marketing strategies can help your business achieve exceptional growth and ROI.
           </p>
 
@@ -270,12 +320,12 @@ export default function HomePage() {
             <CTAButton
               variant="secondary"
               size="lg"
-              className="bg-[hsl(var(--glooper-orange))] hover:bg-orange-600"
+              className="bg-[hsl(var(--glooper-accent-orange))] hover:bg-[hsl(14_90%_55%)] text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
               Start Your Project Today
             </CTAButton>
 
-            <div className="text-blue-100">
+            <div className="text-white/80 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
               or call us at <span className="font-semibold text-white">(555) 123-4567</span>
             </div>
           </div>
@@ -283,7 +333,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[hsl(var(--glooper-gray-dark))] text-white py-16">
+      <footer className="bg-[hsl(var(--glooper-accent-navy))] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             {/* Company Info */}
@@ -298,15 +348,15 @@ export default function HomePage() {
               </p>
 
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-300 hover:text-[hsl(var(--glooper-blue))] transition-colors">
+                <a href="#" className="text-gray-300 hover:text-[hsl(var(--glooper-accent-blue))] transition-colors">
                   <span className="sr-only">Facebook</span>
                   <div className="w-6 h-6 bg-current"></div>
                 </a>
-                <a href="#" className="text-gray-300 hover:text-[hsl(var(--glooper-blue))] transition-colors">
+                <a href="#" className="text-gray-300 hover:text-[hsl(var(--glooper-accent-blue))] transition-colors">
                   <span className="sr-only">Twitter</span>
                   <div className="w-6 h-6 bg-current"></div>
                 </a>
-                <a href="#" className="text-gray-300 hover:text-[hsl(var(--glooper-blue))] transition-colors">
+                <a href="#" className="text-gray-300 hover:text-[hsl(var(--glooper-accent-blue))] transition-colors">
                   <span className="sr-only">LinkedIn</span>
                   <div className="w-6 h-6 bg-current"></div>
                 </a>
