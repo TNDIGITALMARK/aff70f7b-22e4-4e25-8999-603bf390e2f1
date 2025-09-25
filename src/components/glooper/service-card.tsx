@@ -27,17 +27,17 @@ export function ServiceCard({
       className={cn(
         'group relative p-8 rounded-xl transition-all duration-300 hover:transform hover:scale-105',
         isHighlighted
-          ? 'bg-gradient-to-br from-[hsl(var(--glooper-navy))] to-[hsl(var(--glooper-blue))] text-white shadow-xl'
-          : 'bg-white border border-gray-200 hover:shadow-xl hover:border-[hsl(var(--glooper-blue))]',
+          ? 'bg-gradient-to-br from-[hsl(var(--glooper-accent-blue))] via-[hsl(var(--glooper-accent-blue))]/90 to-[hsl(var(--glooper-accent-navy))] text-white shadow-xl hover:shadow-2xl'
+          : 'bg-white/90 backdrop-blur-sm border border-[hsl(var(--glooper-accent-blue))]/20 hover:shadow-xl hover:border-[hsl(var(--glooper-accent-blue))]/40 hover:bg-white',
         className
       )}
     >
       {/* Icon */}
       <div className={cn(
-        'flex items-center justify-center w-16 h-16 rounded-lg mb-6 transition-all duration-300',
+        'flex items-center justify-center w-16 h-16 rounded-xl mb-6 transition-all duration-300',
         isHighlighted
-          ? 'bg-white/20 text-white group-hover:bg-white/30'
-          : 'bg-[hsl(var(--glooper-blue))]/10 text-[hsl(var(--glooper-blue))] group-hover:bg-[hsl(var(--glooper-blue))]/20'
+          ? 'bg-white/25 text-white group-hover:bg-white/35 backdrop-blur-sm'
+          : 'bg-gradient-to-br from-[hsl(var(--glooper-accent-blue))]/10 to-[hsl(var(--glooper-accent-orange))]/5 text-[hsl(var(--glooper-accent-blue))] group-hover:from-[hsl(var(--glooper-accent-blue))]/20 group-hover:to-[hsl(var(--glooper-accent-orange))]/10'
       )}>
         <div className="w-8 h-8">
           {icon}
@@ -49,7 +49,7 @@ export function ServiceCard({
         'text-xl font-bold mb-4 transition-colors duration-300',
         isHighlighted
           ? 'text-white'
-          : 'text-[hsl(var(--glooper-navy))] group-hover:text-[hsl(var(--glooper-blue))]'
+          : 'text-[hsl(var(--glooper-accent-navy))] group-hover:text-[hsl(var(--glooper-accent-blue))]'
       )}>
         {title}
       </h3>
@@ -59,7 +59,7 @@ export function ServiceCard({
         'mb-6 leading-relaxed',
         isHighlighted
           ? 'text-white/90'
-          : 'text-gray-600'
+          : 'text-[hsl(var(--glooper-accent-navy))]/70'
       )}>
         {description}
       </p>
@@ -85,8 +85,8 @@ export function ServiceCard({
               <span className={cn(
                 'text-sm leading-relaxed',
                 isHighlighted
-                  ? 'text-white/80'
-                  : 'text-gray-600'
+                  ? 'text-white/85'
+                  : 'text-[hsl(var(--glooper-accent-navy))]/65'
               )}>
                 {feature}
               </span>

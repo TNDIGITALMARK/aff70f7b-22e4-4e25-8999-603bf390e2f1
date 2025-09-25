@@ -14,16 +14,16 @@ All colors MUST be HSL.
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
 
-  /* Glooper Digital Brand Colors - Lighter Theme */
-  --glooper-navy: 220 26% 84%; /* Soft Light Navy #d1d9e8 */
-  --glooper-blue: 207 70% 90%; /* Light Sky Blue #e3f2fd */
-  --glooper-orange: 14 80% 88%; /* Soft Orange #ffe0cc */
-  --glooper-accent-blue: 207 85% 68%; /* Medium Blue for accents #42a5f5 */
-  --glooper-accent-navy: 220 45% 25%; /* Darker navy for text #2c3e50 */
-  --glooper-accent-orange: 14 85% 65%; /* Vibrant orange for CTAs #ff7043 */
-  --glooper-gray-light: 210 20% 98%; /* Very Light Gray #fbfcfd */
-  --glooper-gray-medium: 218 15% 75%; /* Soft Medium Gray #bdc3c7 */
-  --glooper-gray-dark: 220 18% 15%; /* Dark Gray for text #2c3843 */
+  /* Glooper Digital Brand Colors - Enhanced Lighter Theme */
+  --glooper-navy: 220 26% 88%; /* Softer Light Navy #d8e2f0 */
+  --glooper-blue: 207 70% 92%; /* Very Light Sky Blue #e8f4fd */
+  --glooper-orange: 14 75% 90%; /* Softer Light Orange #ffe5d4 */
+  --glooper-accent-blue: 207 80% 65%; /* Refined Medium Blue #4fc3f7 */
+  --glooper-accent-navy: 220 50% 28%; /* Enhanced navy for contrast #243447 */
+  --glooper-accent-orange: 14 82% 62%; /* Refined vibrant orange #ff6f43 */
+  --glooper-gray-light: 210 25% 99%; /* Ultra Light Gray #fdfdfe */
+  --glooper-gray-medium: 218 18% 78%; /* Refined Medium Gray #c4c9d1 */
+  --glooper-gray-dark: 220 22% 18%; /* Enhanced Dark Gray for better readability #2a3441 */
 
   --primary: 231 67% 31%; /* Glooper Navy */
   --primary-foreground: 210 40% 98%;
@@ -193,6 +193,7 @@ html {
 }
 
 /* Custom gradients - Lighter Theme */
+/* Enhanced gradient definitions */
 .glooper-gradient {
   background: linear-gradient(135deg, hsl(var(--glooper-blue)) 0%, hsl(var(--glooper-navy)) 100%);
 }
@@ -203,6 +204,14 @@ html {
 
 .glooper-gradient-orange {
   background: linear-gradient(135deg, hsl(var(--glooper-orange)) 0%, hsl(var(--glooper-accent-orange)) 100%);
+}
+
+.glooper-gradient-soft {
+  background: linear-gradient(135deg, hsl(var(--glooper-gray-light)) 0%, rgba(255,255,255,0.8) 50%, hsl(var(--glooper-blue)) 100%);
+}
+
+.glooper-gradient-accent {
+  background: linear-gradient(135deg, hsl(var(--glooper-accent-blue)) 0%, hsl(var(--glooper-accent-orange)) 100%);
 }
 
 /* Button styles - Lighter Theme */
@@ -283,7 +292,17 @@ html {
 
 .glooper-text-light {
   color: hsl(var(--glooper-accent-navy));
-  opacity: 0.8;
+  opacity: 0.85;
+}
+
+.glooper-text-accent {
+  color: hsl(var(--glooper-accent-blue));
+  font-weight: 600;
+}
+
+.glooper-text-emphasis {
+  color: hsl(var(--glooper-accent-orange));
+  font-weight: 600;
 }
 
 /* Animations */
@@ -313,4 +332,49 @@ html {
 
 .animate-pulse-slow {
   animation: pulse-slow 3s ease-in-out infinite;
+}
+
+/* Enhanced visual elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes subtle-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(79, 195, 247, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(79, 195, 247, 0.2), 0 0 40px rgba(255, 111, 67, 0.1);
+  }
+}
+
+.animate-glow {
+  animation: subtle-glow 3s ease-in-out infinite;
+}
+
+/* Improved text readability classes */
+.text-enhanced-contrast {
+  color: hsl(var(--glooper-accent-navy));
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bg-glass-accent {
+  background: rgba(79, 195, 247, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(79, 195, 247, 0.2);
 }

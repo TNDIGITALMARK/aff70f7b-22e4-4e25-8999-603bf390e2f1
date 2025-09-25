@@ -70,103 +70,183 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen pt-16">
-      {/* Hero Section */}
-      <section className="relative py-24 lg:py-40 glooper-gradient-hero overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-white/20"></div>
+      {/* Hero Section - Enhanced Design */}
+      <section className="relative py-24 lg:py-40 overflow-hidden bg-gradient-to-br from-[hsl(var(--glooper-gray-light))] via-white to-[hsl(var(--glooper-blue))]/30">
+        {/* Geometric Background Pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-32 h-32 border border-[hsl(var(--glooper-accent-blue))]/20 rotate-45 rounded-lg"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 border border-[hsl(var(--glooper-accent-orange))]/25 rotate-12 rounded-lg"></div>
+          <div className="absolute bottom-32 left-32 w-40 h-40 border border-[hsl(var(--glooper-accent-blue))]/15 -rotate-12 rounded-lg"></div>
+          <div className="absolute bottom-20 right-40 w-28 h-28 border border-[hsl(var(--glooper-accent-orange))]/20 rotate-45 rounded-lg"></div>
+        </div>
 
         {/* Enhanced decorative elements */}
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[hsl(var(--glooper-accent-orange))]/15 rounded-full blur-3xl animate-pulse-slow"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-[hsl(var(--glooper-accent-blue))]/20 rounded-full blur-3xl animate-pulse-slow" style={{animationDelay: '1.5s'}}></div>
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-[hsl(var(--glooper-accent-orange))]/10 to-[hsl(var(--glooper-accent-blue))]/10 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-l from-[hsl(var(--glooper-accent-blue))]/15 to-[hsl(var(--glooper-accent-orange))]/10 rounded-full blur-3xl animate-pulse-slow" style={{animationDelay: '1.5s'}}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-transparent via-white/40 to-transparent rounded-full blur-2xl"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Text Content */}
             <div className="space-y-8 animate-fade-in-up">
-              <div className="inline-block px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-sm font-semibold text-[hsl(var(--glooper-accent-navy))] border border-[hsl(var(--glooper-accent-blue))]/30 mb-4">
-                🚀 Digital Excellence Redefined
+              <div className="inline-flex items-center gap-2 px-5 py-2 bg-white/95 backdrop-blur-md rounded-full text-sm font-semibold text-[hsl(var(--glooper-accent-navy))] border border-[hsl(var(--glooper-accent-blue))]/20 shadow-sm mb-6 hover:shadow-md transition-all duration-300">
+                <div className="w-2 h-2 bg-[hsl(var(--glooper-accent-orange))] rounded-full animate-pulse"></div>
+                Digital Excellence Redefined
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight text-[hsl(var(--glooper-accent-navy))]">
-                GLOOPER
-                <span className="block text-[hsl(var(--glooper-accent-blue))] bg-gradient-to-r from-[hsl(var(--glooper-accent-blue))] to-[hsl(var(--glooper-accent-orange))] bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6">
+                <span className="text-[hsl(var(--glooper-accent-navy))]">
+                  GLOOPER
+                </span>
+                <span className="block bg-gradient-to-r from-[hsl(var(--glooper-accent-blue))] via-[hsl(var(--glooper-accent-blue))]/80 to-[hsl(var(--glooper-accent-orange))] bg-clip-text text-transparent drop-shadow-sm">
                   DIGITAL
                 </span>
-                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 font-normal text-[hsl(var(--glooper-accent-navy))]/80">
-                  Unlocking Digital Excellence
+                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 font-medium text-[hsl(var(--glooper-accent-navy))]/70">
+                  Amplify Your ROI Through Data-Driven Growth
                 </span>
               </h1>
 
-              <p className="text-lg md:text-xl glooper-text-light leading-relaxed max-w-xl">
-                Transform your business with data-driven digital marketing strategies that deliver measurable results. We specialize in SEO, PPC, and analytics to drive growth and maximize ROI.
+              <p className="text-lg md:text-xl leading-relaxed max-w-xl text-[hsl(var(--glooper-accent-navy))]/70 mb-8">
+                Unlock exponential growth with our proven digital marketing strategies. We combine cutting-edge analytics, SEO mastery, and PPC expertise to deliver <span className="font-semibold text-[hsl(var(--glooper-accent-orange))]">"+340% ROI increases</span> for businesses ready to scale.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <CTAButton
                   variant="secondary"
                   size="lg"
                   onClick={() => scrollToSection('contact')}
-                  className="bg-[hsl(var(--glooper-accent-orange))] hover:bg-[hsl(14_90%_55%)] text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="bg-gradient-to-r from-[hsl(var(--glooper-accent-orange))] to-[hsl(var(--glooper-accent-orange))]/90 hover:from-[hsl(var(--glooper-accent-orange))]/90 hover:to-[hsl(14_90%_55%)] text-white shadow-lg hover:shadow-2xl hover:shadow-[hsl(var(--glooper-accent-orange))]/25 transform hover:scale-105 transition-all duration-300 border-0"
                 >
-                  Start Your Project Today
+                  Get Free Consultation
                 </CTAButton>
 
                 <CTAButton
                   variant="outline"
                   size="lg"
                   onClick={() => scrollToSection('services')}
-                  className="border-2 border-[hsl(var(--glooper-accent-blue))] text-[hsl(var(--glooper-accent-navy))] bg-white/80 backdrop-blur-sm hover:bg-[hsl(var(--glooper-accent-blue))] hover:text-white shadow-md hover:shadow-lg transition-all duration-300"
+                  className="border-2 border-[hsl(var(--glooper-accent-blue))]/60 text-[hsl(var(--glooper-accent-navy))] bg-white/90 backdrop-blur-md hover:bg-[hsl(var(--glooper-accent-blue))] hover:text-white hover:border-[hsl(var(--glooper-accent-blue))] shadow-md hover:shadow-lg hover:shadow-[hsl(var(--glooper-accent-blue))]/20 transition-all duration-300"
                 >
-                  View Our Services
+                  Explore Services
                 </CTAButton>
+              </div>
+
+              {/* Trust indicators */}
+              <div className="flex items-center gap-6 mt-8 text-sm text-[hsl(var(--glooper-accent-navy))]/60">
+                <div className="flex items-center gap-2">
+                  <div className="flex -space-x-1">
+                    <div className="w-6 h-6 bg-gradient-to-r from-[hsl(var(--glooper-accent-blue))] to-[hsl(var(--glooper-accent-orange))] rounded-full border-2 border-white"></div>
+                    <div className="w-6 h-6 bg-gradient-to-r from-[hsl(var(--glooper-accent-orange))] to-[hsl(var(--glooper-accent-blue))] rounded-full border-2 border-white"></div>
+                    <div className="w-6 h-6 bg-gradient-to-r from-[hsl(var(--glooper-accent-blue))] to-[hsl(var(--glooper-accent-orange))] rounded-full border-2 border-white"></div>
+                  </div>
+                  <span className="font-medium">250+ Happy Clients</span>
+                </div>
+                <div className="h-4 w-px bg-[hsl(var(--glooper-accent-navy))]/20"></div>
+                <div className="flex items-center gap-1">
+                  <div className="flex text-[hsl(var(--glooper-accent-orange))]">
+                    ★★★★★
+                  </div>
+                  <span className="font-medium ml-1">4.9/5 Rating</span>
+                </div>
               </div>
             </div>
 
-            {/* Hero Image */}
+            {/* Hero Visual */}
             <div className="relative lg:pl-8 animate-fade-in-up">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500 bg-white/20 backdrop-blur-sm border border-white/30">
-                <img
-                  src="/generated/glooper-team-hero.jpg"
-                  alt="Professional digital marketing team collaborating"
-                  className="w-full h-auto object-cover opacity-90"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--glooper-accent-blue))]/20 via-transparent to-[hsl(var(--glooper-accent-orange))]/10"></div>
+              {/* Main visual container */}
+              <div className="relative">
+                {/* Background glow effect */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-[hsl(var(--glooper-accent-blue))]/20 via-transparent to-[hsl(var(--glooper-accent-orange))]/20 blur-2xl rounded-3xl"></div>
 
-                {/* Floating stats overlay */}
-                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-[hsl(var(--glooper-accent-blue))]/20">
-                  <div className="text-2xl font-bold text-[hsl(var(--glooper-accent-navy))]">340%</div>
-                  <div className="text-sm text-[hsl(var(--glooper-accent-navy))]/70">ROI Increase</div>
-                </div>
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500 bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-md border border-white/40">
+                  {/* Chart/Dashboard Visualization */}
+                  <div className="p-8 bg-gradient-to-br from-white/95 to-[hsl(var(--glooper-blue))]/10">
+                    <div className="flex justify-between items-center mb-6">
+                      <div className="text-lg font-semibold text-[hsl(var(--glooper-accent-navy))]">Analytics Dashboard</div>
+                      <div className="flex gap-2">
+                        <div className="w-2 h-2 bg-[hsl(var(--glooper-accent-orange))] rounded-full animate-pulse"></div>
+                        <div className="w-2 h-2 bg-[hsl(var(--glooper-accent-blue))] rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                      </div>
+                    </div>
 
-                <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-[hsl(var(--glooper-accent-orange))]/20">
-                  <div className="text-2xl font-bold text-[hsl(var(--glooper-accent-navy))]">250+</div>
-                  <div className="text-sm text-[hsl(var(--glooper-accent-navy))]/70">Happy Clients</div>
+                    {/* Mock chart bars */}
+                    <div className="flex items-end gap-3 h-32 mb-4">
+                      <div className="bg-gradient-to-t from-[hsl(var(--glooper-accent-blue))] to-[hsl(var(--glooper-accent-blue))]/60 w-8 h-16 rounded-t"></div>
+                      <div className="bg-gradient-to-t from-[hsl(var(--glooper-accent-orange))] to-[hsl(var(--glooper-accent-orange))]/60 w-8 h-24 rounded-t"></div>
+                      <div className="bg-gradient-to-t from-[hsl(var(--glooper-accent-blue))] to-[hsl(var(--glooper-accent-blue))]/60 w-8 h-20 rounded-t"></div>
+                      <div className="bg-gradient-to-t from-[hsl(var(--glooper-accent-orange))] to-[hsl(var(--glooper-accent-orange))]/60 w-8 h-32 rounded-t"></div>
+                      <div className="bg-gradient-to-t from-[hsl(var(--glooper-accent-blue))] to-[hsl(var(--glooper-accent-blue))]/60 w-8 h-28 rounded-t"></div>
+                      <div className="bg-gradient-to-t from-[hsl(var(--glooper-accent-orange))] to-[hsl(var(--glooper-accent-orange))]/60 w-8 h-20 rounded-t"></div>
+                    </div>
+
+                    {/* Trend line overlay */}
+                    <div className="relative h-20 mb-4">
+                      <svg className="w-full h-full" viewBox="0 0 200 50">
+                        <path
+                          d="M10,40 Q50,20 100,25 T190,15"
+                          fill="none"
+                          stroke="hsl(var(--glooper-accent-orange))"
+                          strokeWidth="3"
+                          className="opacity-80"
+                        />
+                        <circle cx="190" cy="15" r="4" fill="hsl(var(--glooper-accent-orange))"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  {/* Floating metrics */}
+                  <div className="absolute -top-4 -right-4 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-[hsl(var(--glooper-accent-blue))]/20 transform hover:scale-105 transition-transform">
+                    <div className="text-2xl font-bold text-[hsl(var(--glooper-accent-orange))]">+340%</div>
+                    <div className="text-sm text-[hsl(var(--glooper-accent-navy))]/70">ROI Growth</div>
+                  </div>
+
+                  <div className="absolute -bottom-4 -left-4 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-[hsl(var(--glooper-accent-orange))]/20 transform hover:scale-105 transition-transform">
+                    <div className="text-2xl font-bold text-[hsl(var(--glooper-accent-blue))]">250+</div>
+                    <div className="text-sm text-[hsl(var(--glooper-accent-navy))]/70">Success Stories</div>
+                  </div>
+
+                  <div className="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-gradient-to-r from-[hsl(var(--glooper-accent-blue))] to-[hsl(var(--glooper-accent-orange))] text-white rounded-xl p-3 shadow-lg">
+                    <div className="text-lg font-bold">4.9★</div>
+                    <div className="text-xs opacity-90">Client Rating</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Enhanced floating particles */}
-        <div className="absolute top-20 right-10 w-4 h-4 bg-[hsl(var(--glooper-accent-orange))] rounded-full opacity-60 animate-bounce" style={{animationDelay: '0s'}}></div>
-        <div className="absolute top-40 right-32 w-3 h-3 bg-[hsl(var(--glooper-accent-blue))] rounded-full opacity-50 animate-bounce" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-40 left-20 w-5 h-5 bg-[hsl(var(--glooper-accent-orange))] rounded-full opacity-40 animate-bounce" style={{animationDelay: '2s'}}></div>
+        {/* Refined floating elements */}
+        <div className="absolute top-20 right-16 w-3 h-3 bg-[hsl(var(--glooper-accent-orange))]/40 rounded-full animate-pulse-slow"></div>
+        <div className="absolute top-32 right-40 w-2 h-2 bg-[hsl(var(--glooper-accent-blue))]/50 rounded-full animate-pulse-slow" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-32 left-16 w-4 h-4 bg-[hsl(var(--glooper-accent-blue))]/30 rounded-full animate-pulse-slow" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 right-8 w-1 h-1 bg-[hsl(var(--glooper-accent-orange))]/60 rounded-full animate-pulse-slow" style={{animationDelay: '0.5s'}}></div>
+
+        {/* Subtle geometric accents */}
+        <div className="absolute top-16 left-1/4 w-6 h-6 border border-[hsl(var(--glooper-accent-blue))]/20 rotate-45 animate-pulse-slow"></div>
+        <div className="absolute bottom-24 right-1/4 w-4 h-4 border border-[hsl(var(--glooper-accent-orange))]/25 rotate-12 animate-pulse-slow" style={{animationDelay: '1.5s'}}></div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="glooper-section bg-[hsl(var(--glooper-gray-light))]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Services Section - Enhanced */}
+      <section id="services" className="glooper-section relative overflow-hidden bg-gradient-to-b from-white via-[hsl(var(--glooper-gray-light))] to-white">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-20 left-10 w-32 h-32 border border-[hsl(var(--glooper-accent-blue))]/10 rotate-45 rounded-lg"></div>
+          <div className="absolute bottom-20 right-20 w-40 h-40 border border-[hsl(var(--glooper-accent-orange))]/10 -rotate-12 rounded-lg"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-block px-6 py-2 bg-[hsl(var(--glooper-accent-blue))]/10 backdrop-blur-sm rounded-full text-sm font-semibold text-[hsl(var(--glooper-accent-blue))] border border-[hsl(var(--glooper-accent-blue))]/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[hsl(var(--glooper-accent-blue))]/5 to-[hsl(var(--glooper-accent-orange))]/5 backdrop-blur-sm rounded-full text-sm font-semibold text-[hsl(var(--glooper-accent-blue))] border border-[hsl(var(--glooper-accent-blue))]/15 mb-6 shadow-sm">
+              <div className="w-2 h-2 bg-[hsl(var(--glooper-accent-blue))] rounded-full animate-pulse"></div>
               What We Offer
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold glooper-heading mb-4">
-              Our Digital Marketing Services
+            <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--glooper-accent-navy))] mb-6">
+              Strategic Digital Marketing Services
             </h2>
-            <p className="text-lg glooper-text max-w-3xl mx-auto">
-              We deliver comprehensive digital marketing solutions tailored to your business needs,
-              combining cutting-edge technology with proven strategies to drive measurable results.
+            <p className="text-lg text-[hsl(var(--glooper-accent-navy))]/70 max-w-3xl mx-auto leading-relaxed">
+              Transform your business with our comprehensive suite of data-driven digital marketing solutions.
+              We combine cutting-edge technology with proven strategies to deliver <span className="font-semibold text-[hsl(var(--glooper-accent-orange))]">measurable growth</span> and maximize your ROI.
             </p>
           </div>
 
@@ -266,18 +346,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="glooper-section bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Testimonials Section - Enhanced */}
+      <section id="testimonials" className="glooper-section bg-gradient-to-b from-white via-[hsl(var(--glooper-gray-light))]/50 to-white relative overflow-hidden">
+        {/* Subtle background elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-r from-[hsl(var(--glooper-accent-orange))]/5 to-[hsl(var(--glooper-accent-blue))]/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-80 h-80 bg-gradient-to-l from-[hsl(var(--glooper-accent-blue))]/5 to-transparent rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-block px-6 py-2 bg-[hsl(var(--glooper-accent-orange))]/10 backdrop-blur-sm rounded-full text-sm font-semibold text-[hsl(var(--glooper-accent-orange))] border border-[hsl(var(--glooper-accent-orange))]/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[hsl(var(--glooper-accent-orange))]/8 to-[hsl(var(--glooper-accent-orange))]/5 backdrop-blur-sm rounded-full text-sm font-semibold text-[hsl(var(--glooper-accent-orange))] border border-[hsl(var(--glooper-accent-orange))]/15 mb-6 shadow-sm">
+              <div className="flex text-[hsl(var(--glooper-accent-orange))] text-xs">★★★★★</div>
               Client Stories
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold glooper-heading mb-4">
-              Client Success Stories
+            <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--glooper-accent-navy))] mb-6">
+              Proven Success Stories
             </h2>
-            <p className="text-lg glooper-text max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our clients have to say about working with Glooper Digital.
+            <p className="text-lg text-[hsl(var(--glooper-accent-navy))]/70 max-w-3xl mx-auto leading-relaxed">
+              Our clients consistently achieve <span className="font-semibold text-[hsl(var(--glooper-accent-orange))]">exceptional results</span>.
+              Here's what industry leaders say about partnering with Glooper Digital.
             </p>
           </div>
 

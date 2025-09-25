@@ -25,15 +25,15 @@ export function TestimonialCard({
   return (
     <div
       className={cn(
-        'group relative bg-white rounded-xl p-8 shadow-md border border-gray-100',
+        'group relative bg-white/95 backdrop-blur-sm rounded-xl p-8 shadow-md border border-[hsl(var(--glooper-accent-blue))]/20',
         'transition-all duration-300 hover:shadow-xl hover:transform hover:scale-105',
-        'hover:border-[hsl(var(--glooper-blue))]',
+        'hover:border-[hsl(var(--glooper-accent-blue))]/40 hover:bg-white',
         className
       )}
     >
       {/* Quote mark */}
       <div className="absolute -top-4 left-8">
-        <div className="w-8 h-8 bg-[hsl(var(--glooper-orange))] rounded-full flex items-center justify-center">
+        <div className="w-8 h-8 bg-gradient-to-r from-[hsl(var(--glooper-accent-orange))] to-[hsl(var(--glooper-accent-orange))]/90 rounded-full flex items-center justify-center shadow-lg">
           <svg
             className="w-4 h-4 text-white"
             fill="currentColor"
@@ -53,8 +53,8 @@ export function TestimonialCard({
             className={cn(
               'w-4 h-4',
               i < rating
-                ? 'text-yellow-400 fill-current'
-                : 'text-gray-300 fill-current'
+                ? 'text-[hsl(var(--glooper-accent-orange))] fill-current'
+                : 'text-[hsl(var(--glooper-gray-medium))] fill-current'
             )}
             viewBox="0 0 24 24"
           >
@@ -64,7 +64,7 @@ export function TestimonialCard({
       </div>
 
       {/* Quote */}
-      <blockquote className="text-gray-700 italic mb-6 leading-relaxed text-lg">
+      <blockquote className="text-[hsl(var(--glooper-accent-navy))]/80 italic mb-6 leading-relaxed text-lg font-medium">
         "{quote}"
       </blockquote>
 
@@ -79,7 +79,7 @@ export function TestimonialCard({
               className="w-12 h-12 rounded-full object-cover border-2 border-gray-100"
             />
           ) : (
-            <div className="w-12 h-12 bg-gradient-to-br from-[hsl(var(--glooper-blue))] to-[hsl(var(--glooper-navy))] rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-[hsl(var(--glooper-accent-blue))] to-[hsl(var(--glooper-accent-navy))] rounded-full flex items-center justify-center shadow-md">
               <span className="text-white font-semibold text-lg">
                 {author.charAt(0)}
               </span>
@@ -89,17 +89,17 @@ export function TestimonialCard({
 
         {/* Author details */}
         <div>
-          <h4 className="font-semibold text-[hsl(var(--glooper-navy))] group-hover:text-[hsl(var(--glooper-blue))] transition-colors duration-300">
+          <h4 className="font-semibold text-[hsl(var(--glooper-accent-navy))] group-hover:text-[hsl(var(--glooper-accent-blue))] transition-colors duration-300">
             {author}
           </h4>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-[hsl(var(--glooper-accent-navy))]/60">
             {position} at {company}
           </p>
         </div>
       </div>
 
       {/* Hover gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--glooper-blue))]/5 to-[hsl(var(--glooper-navy))]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--glooper-accent-blue))]/8 to-[hsl(var(--glooper-accent-orange))]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
     </div>
   );
 }
