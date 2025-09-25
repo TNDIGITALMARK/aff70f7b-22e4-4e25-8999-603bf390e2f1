@@ -14,11 +14,19 @@ All colors MUST be HSL.
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
 
-  --primary: 222.2 47.4% 11.2%;
+  /* Glooper Digital Brand Colors */
+  --glooper-navy: 231 67% 31%; /* Deep Navy #1a237e */
+  --glooper-blue: 207 90% 54%; /* Electric Blue #2196f3 */
+  --glooper-orange: 14 91% 58%; /* Vibrant Orange #ff5722 */
+  --glooper-gray-light: 210 17% 93%; /* Light Gray #f5f6fa */
+  --glooper-gray-medium: 218 11% 65%; /* Medium Gray #9ca3af */
+  --glooper-gray-dark: 220 13% 18%; /* Dark Gray #374151 */
+
+  --primary: 231 67% 31%; /* Glooper Navy */
   --primary-foreground: 210 40% 98%;
 
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 207 90% 54%; /* Glooper Blue */
+  --secondary-foreground: 0 0% 100%;
 
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
@@ -124,7 +132,15 @@ All colors MUST be HSL.
   --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
-  
+
+  /* Glooper Digital Brand Colors */
+  --color-glooper-navy: hsl(var(--glooper-navy));
+  --color-glooper-blue: hsl(var(--glooper-blue));
+  --color-glooper-orange: hsl(var(--glooper-orange));
+  --color-glooper-gray-light: hsl(var(--glooper-gray-light));
+  --color-glooper-gray-medium: hsl(var(--glooper-gray-medium));
+  --color-glooper-gray-dark: hsl(var(--glooper-gray-dark));
+
   /* Border Radius */
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
@@ -160,4 +176,124 @@ All colors MUST be HSL.
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Glooper Digital Custom Styles */
+
+/* Smooth scroll for navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom gradients */
+.glooper-gradient {
+  background: linear-gradient(135deg, hsl(var(--glooper-navy)) 0%, hsl(var(--glooper-blue)) 100%);
+}
+
+.glooper-gradient-orange {
+  background: linear-gradient(135deg, hsl(var(--glooper-orange)) 0%, #ff8a50 100%);
+}
+
+/* Button styles */
+.glooper-btn-primary {
+  background: hsl(var(--glooper-navy));
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.glooper-btn-primary:hover {
+  background: hsl(var(--glooper-blue));
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(33, 150, 243, 0.2);
+}
+
+.glooper-btn-secondary {
+  background: hsl(var(--glooper-orange));
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.glooper-btn-secondary:hover {
+  background: #e64a19;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 87, 34, 0.3);
+}
+
+/* Card styles */
+.glooper-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid hsl(var(--glooper-gray-light));
+}
+
+.glooper-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Section spacing */
+.glooper-section {
+  padding: 80px 0;
+}
+
+.glooper-section-sm {
+  padding: 60px 0;
+}
+
+/* Typography */
+.glooper-heading {
+  font-weight: 700;
+  line-height: 1.2;
+  color: hsl(var(--glooper-navy));
+}
+
+.glooper-text {
+  color: hsl(var(--glooper-gray-dark));
+  line-height: 1.6;
+}
+
+.glooper-text-muted {
+  color: hsl(var(--glooper-gray-medium));
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
 }
